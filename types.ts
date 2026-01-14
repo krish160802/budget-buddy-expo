@@ -1,3 +1,5 @@
+//Types File
+
 export interface Transaction {
   id: number;
   category_id: number;

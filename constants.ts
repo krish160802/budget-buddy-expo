@@ -1,3 +1,5 @@
+//Constants File
+
 export const categoryColors: { [key: string]: string } = {
   Groceries: "#FFD700", // Gold
   Rent: "#FF6347", // Tomato
