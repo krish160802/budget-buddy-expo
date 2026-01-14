@@ -10,38 +10,8 @@ import Payment from "./screens/sheets/Payment";
 
 const Stack = createNativeStackNavigator();
 
-// const loadDatabase = async () => {
-//   const dbName = "mySQLiteDB.db";
-//   const dbAsset = require("./assets/mySQLiteDB.db");
-//   const dbUri = Asset.fromModule(dbAsset).uri;
-//   const dbFilePath = `${FileSystem.documentDirectory}SQLite/${dbName}`;
-
-//   const fileInfo = await FileSystem.getInfoAsync(dbFilePath);
-//   if (!fileInfo.exists) {
-//     await FileSystem.makeDirectoryAsync(
-//       `${FileSystem.documentDirectory}SQLite`,
-//       { intermediates: true }
-//     );
-//     await FileSystem.downloadAsync(dbUri, dbFilePath);
-//   }
-// };
-
 export default function App() {
-  // const [dbLoaded, setDbLoaded] = React.useState<boolean>(false);
-
-  // React.useEffect(() => {
-  //   loadDatabase()
-  //     .then(() => setDbLoaded(true))
-  //     .catch((e) => console.error(e));
-  // }, []);
-
-  // if (!dbLoaded)
-  //   return (
-  //     <View style={{ flex: 1 }}>
-  //       <ActivityIndicator size={"large"} />
-  //       <Text>Loading Database...</Text>
-  //     </View>
-  //   );
+  
   return (
     <NavigationContainer>
       <React.Suspense
@@ -64,11 +34,22 @@ export default function App() {
               name="Home"
               component={Home}
               options={{
-                headerTitle: "Budget Buddy",
-                headerLargeTitle: true,
-                headerTransparent: Platform.OS === "ios" ? true : false,
-                headerBlurEffect: "light",
-              }}
+    headerTitle: "HELLO Buddy",
+    headerTitleAlign: "center",
+    headerLeft: () => null,
+    headerLargeTitle: Platform.OS === "ios",
+    headerTransparent: Platform.OS === "ios",
+    headerBlurEffect: Platform.OS === "ios" ? "systemMaterialLight" : undefined,
+    headerStyle: {
+      backgroundColor: Platform.OS === "android" ? "#E0EAFF" : "transparent",
+    },
+    headerTitleStyle: {
+      fontWeight: "700",
+      color: "#1E3A8A",
+    },
+    headerTintColor: "#1E3A8A",
+    headerShadowVisible: false,
+  }}
             />
             <Stack.Screen
               name="Payment"
