@@ -20,12 +20,4 @@ This app is designed to help users manage their finances effectively using the r
 - **Database:** SQLite
 - **Project Type:** Mobile
 
-## Getting Started
-
-To get started with this project, clone the repository and install the required dependencies.
-
-```bash
-git clone [https://github.com/krish160802/budget-buddy-expo]
-cd Budget-Buddy-App
-```
 
